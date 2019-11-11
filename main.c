@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 #include "funcoes.c"
 
 int main() {
@@ -56,7 +57,19 @@ int main() {
 
             case 4:
             {
+                float numero;
+                int resultado;
 
+                printf("Digite um numero: ");
+                scanf("%f", &numero);
+
+                resultado = exercicio4(numero);
+                if (resultado == 1)
+                    printf("O numero e quadrado perfeito!");
+                else
+                    printf("O numero nao e quadrado perfeito!");
+
+                break;
             }
 
             default:

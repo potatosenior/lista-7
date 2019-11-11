@@ -29,3 +29,11 @@ int exercicio3(int num)
         else
             return 0;
 }
+
+int exercicio4(float num)
+{
+    if (sqrt(num) == (int)sqrt(num))
+        return 1;
+    else
+        return 0;
+}
