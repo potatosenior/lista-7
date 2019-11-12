@@ -182,7 +182,207 @@ int main() {
 
             case 13:
             {
+                float num_a, num_b, resultado;
+                char caractere;
 
+                printf("Digite o primeiro numero: ");
+                scanf("%f", &num_a);
+                printf("Digite o segundo numero: ");
+                scanf("%f", &num_b);
+                printf("Digite o simbolo (+, -, /, *): ");
+                setbuf(stdin, NULL);
+                caractere = getchar();
+                if (caractere != '+' && caractere != '-' && caractere != '*' && caractere != '/')
+                    printf("Simbolo invalido!");
+                else
+                {
+                    resultado = exercicio13(num_a, num_b, caractere);
+                    printf("\nO resultado para %.2f %c %.2f = %.2f", num_a, caractere, num_b, resultado);
+                }
+                break;
+            }
+
+            case 14:
+            {
+                float distancia, litros;
+
+                printf("Digite a distancai percorrida: ");
+                scanf("%f", &distancia);
+                printf("Digite quantos litros foram consumidos: ");
+                scanf("%f", &litros);
+                exercicio14(distancia, litros);
+                break;
+            }
+
+            case 15:
+            {
+                int lado_1, lado_2, lado_3;
+
+                printf("Digite o valor do 1 lado do triangulo(somente valores positivos): ");
+                scanf("%d", &lado_1);
+                if (lado_1 < 0)
+                {
+                    printf("\nValor menor que 0!");
+                    break;
+                }
+                printf("Digite o valor do 2 lado do triangulo(somente valores positivos): ");
+                scanf("%d", &lado_2);
+                if (lado_2 < 0)
+                {
+                    printf("\nValor menor que 0!");
+                    break;
+                }
+                printf("Digite o valor do 3 lado do triangulo(somente valores positivos): ");
+                scanf("%d", &lado_3);
+                if (lado_3 < 0)
+                {
+                    printf("\nValor menor que 0!");
+                    break;
+                }
+                exercicio15(lado_1, lado_2, lado_3);
+                break;
+            }
+
+            case 16:
+            {
+                int qntd;
+
+                printf("Digite o tamanho da linha: ");
+                scanf("%d", &qntd);
+                if (qntd > 0)
+                    exercicio16(qntd);
+                else
+                    printf("Valor negativo! Digite somente positivos.");
+                break;
+            }
+
+            case 17:
+            {
+                int num_1, num_2, resultado;
+
+                printf("Digite o primeiro numero: ");
+                scanf("%d", &num_1);
+                printf("Digite o segundo numero: ");
+                scanf("%d", &num_2);
+                resultado = exercicio17(num_1, num_2);
+                printf("Resultado: %d", resultado);
+                break;
+            }
+
+            case 18:
+            {
+                int x, z, resultado;
+
+                printf("Digite o valor da base: ");
+                scanf("%d", &x);
+                printf("Digite o valor do expoente: ");
+                scanf("%d", &z);
+
+                resultado = exercicio18(x, z);
+                printf("Resultado para %d^%d = %d", x, z, resultado);
+                break;
+            }
+
+            case 19:
+            {
+                int numero, resultado;
+
+                printf("Digite um numero: ");
+                scanf("%d", &numero);
+                resultado = exercicio19(numero);
+                if (numero == 0)
+                    printf("Nao existe um maior fator primo para %d!", numero);
+                else
+                    printf("Maior fator primo: %d", resultado);
+                break;
+            }
+
+            case 20:
+            {
+                int num, resultado;
+
+                printf("Digite um numero: ");
+                scanf("%d", &num);
+                resultado = exercicio20(num);
+                printf("\n%d! = %d", num, resultado);
+
+                break;
+            }
+
+            case 21:
+            {
+                int numero, resultado;
+
+                printf("Digite um numero: ");
+                scanf("%d", &numero);
+                resultado = exercicio21(numero);
+                printf("Existem %d numeros primos menores que %d!", resultado, numero);
+
+                break;
+            }
+
+            case 22:
+            {
+                int num;
+
+                printf("Digite um numero: ");
+                scanf("%d", &num);
+                exercicio22(num);
+                break;
+            }
+
+            case 23:
+            {
+                int num;
+
+                printf("Digite um numero: ");
+                scanf("%d", &num);
+                exercicio23(num);
+                break;
+            }
+
+            case 24:
+            {
+                int num;
+
+                printf("Digite um numero: ");
+                scanf("%d", &num);
+                exercicio24(num);
+                break;
+            }
+
+            case 25: {
+                int num;
+                float resultado;
+
+                printf("Digite um numero: ");
+                scanf("%d", &num);
+                resultado = exercicio25(num);
+                printf("Resultado: %.2f", resultado);
+                break;
+            }
+
+            case 26:
+            {
+                int num, resultado;
+
+                printf("Digite um numero: ");
+                scanf("%d", &num);
+                resultado = exercicio26(num);
+                printf("Soma de 1 ate %d = %d", num, resultado);
+                break;
+            }
+
+            case 27:
+            {
+                int num;
+                float resultado;
+
+                printf("Digite um numero: ");
+                scanf("%d", &num);
+                resultado = exercicio27(num);
+                printf("Seno de %d = %.3f", num, resultado);
+                break;
             }
 
             default:

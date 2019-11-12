@@ -86,9 +86,216 @@ int exercicio12(char num[])
     return soma;
 }
 
+float exercicio13(float a, float b, char c)
+{
+    if (c == '+')
+        return a+b;
+    else
+        if (c == '-')
+            return a-b;
+        else
+            if (c == '*')
+                return a*b;
+            else
+                if (c == '/')
+                    return a/b;
+}
 
+void exercicio14(float dist, float litros)
+{
+    if (dist / litros < 8)
+        printf("\nVenda o carro!");
+    else
+        if(dist / litros < 14)
+            printf("\nEconomico!");
+        else
+            printf("\nMuito economico!");
+}
 
+void exercicio15(int a, int b, int c)
+{
+    if ( (a > b + c) || b > a + c || c > a + b)
+    {
+        printf("Nao formam um triangulo!");
+        return;
+    }else
+    {
+        if (a == b && a == c)
+        {
+            printf("O triangulo e equilatero!");
+            return;;
+        }else
+            if ( (a == b && a != c) || (b == c && b != a) || (c == a && c != b))
+            {
+                printf("O triangulo e isosceles!");
+                return;
+            }
+            else
+            {
+                printf("O triangulo e escaleno!");
+                return;
+            }
+    }
+}
 
+void exercicio16(int qntd)
+{
+    for (int i = 0; i < qntd; ++i) {
+        printf("=");
+    }
+}
 
+int exercicio17(int a, int b)
+{
+    int soma = 0;
 
+    if (b > a)
+    {
+        for (int i = a+1; i < b; ++i) {
+            soma += i;
+        }
+        return soma;
+    }else
+        if (a > b)
+        {
+            for (int i = b+1; i < a; ++i) {
+                soma += i;
+            }
+            return soma;
+        }
+        else
+            return 0;
+}
 
+int exercicio18(int x, int z)
+{
+    int result = x, num = x;
+    if (z == 0)
+        return 1;
+
+    for (int i = 1; i < z; ++i) {
+        num = num*x;
+        result = num;
+    }
+    return result;
+}
+
+int exercicio19(int num)
+{
+    int result = 2, ehprimo = 0;
+    if (num < 2)
+        return 0;
+
+    for (int i = num; i >= 2; --i)
+    {
+        ehprimo = 1;
+        for (int j = 2; j <= i; ++j) {
+            if (i % j == 0 && j != i)
+                ehprimo = 0;
+        }
+        if (ehprimo == 1)
+            return i;
+    }
+    return result;
+}
+
+int exercicio20(int num)
+{
+    if(num == 0)
+        return 1;
+
+    for (int i = num; i > 1; --i) {
+        num = num * (i-1);
+    }
+    return num;
+}
+
+int exercicio21(int num)
+{
+    int result = 0, ehprimo = 0;
+    if (num < 2)
+        return 0;
+
+    for (int i = num; i >= 2; --i)
+    {
+        ehprimo = 1;
+        for (int j = 2; j <= i; ++j) {
+            if (i % j == 0 && j != i)
+                ehprimo = 0;
+        }
+        if (ehprimo == 1)
+            result++;
+    }
+    return result;
+}
+
+void exercicio22(int num)
+{
+    for (int i = 0; i < num; ++i) {
+        for (int j = 0; j <= i; ++j) {
+            printf("!");
+        }
+        printf("\n");
+    }
+}
+
+void exercicio23(int num)
+{
+    printf("\n");
+    for (int i = 0; i < num; ++i) {
+        for (int j = 0; j <= i; ++j) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for (int i = num-1; i >= 0; --i) {
+        for (int j = 0; j < i; ++j) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+void exercicio24(int num)
+{
+    for (int i = 0; i <= num; ++i) {
+        for (int j = 0; j < num-i; ++j) {
+            printf(" ");
+        }
+        for (int k = 0; k < 2 * i - 1; ++k) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+float exercicio25(int num)
+{
+    float soma = 0;
+    for (int i = 1; i <= num; ++i) {
+        soma += (pow(i,2) + 1) / (i+3);
+    }
+    return soma;
+}
+
+int exercicio26(int num)
+{
+    int soma = 0;
+    for (int i = 0; i < num; ++i) {
+        soma += i;
+    }
+    return soma;
+}
+
+float exercicio27(int num)
+{
+    float somatoria = 0;
+
+    for (int i = 0; i < 5; ++i) {
+        if(i%2 == 0)
+            somatoria += pow(num, 2*i+1) / exercicio20(2*i-1) ;
+        else
+            somatoria -= pow(num, 2*i+1) / exercicio20(2*i-1) ;
+    }
+    return somatoria;
+}
