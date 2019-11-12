@@ -1,6 +1,7 @@
 //
 // Created by Marco Antonio on 11/11/2019.
 //
+#include "cabeccc.h"
 
 int exercicio1(int num)
 {
@@ -37,3 +38,57 @@ int exercicio4(float num)
     else
         return 0;
 }
+
+float exercicio5(float raio)
+{
+    return (4/3)*pi*pow(raio, 3);
+}
+
+int exercicio6(int hora, int min, int seg)
+{
+    return (hora*60*60+min*60+seg);
+}
+
+float exercicio7(float celsius)
+{
+    return celsius*(9/5) + 32;
+}
+
+float exercicio8(int a, int b)
+{
+    return sqrt( pow(a, 2) + pow(b ,2) );
+}
+
+float exercicio9(float altura, float raio)
+{
+    return pi * pow(raio, 2) *altura;
+}
+
+int exercicio10(int a, int b)
+{
+    if (a > b)
+        return 1;
+    else
+        if (b > a)
+            return 2;
+        else
+            return 0;
+}
+
+int exercicio12(char num[])
+{
+    int soma = 0;
+
+    for (int i = 0; i < strlen(num)-1; ++i) {
+        soma += (num[i] - 48);
+    }
+
+    return soma;
+}
+
+
+
+
+
+
+
